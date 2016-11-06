@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named testSort
+
+# Build rule for target.
+testSort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testSort
+.PHONY : testSort
+
+# fast build rule for target.
+testSort/fast:
+	$(MAKE) -f CMakeFiles/testSort.dir/build.make CMakeFiles/testSort.dir/build
+.PHONY : testSort/fast
+
+#=============================================================================
+# Target rules for targets named testListnd
+
+# Build rule for target.
+testListnd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testListnd
+.PHONY : testListnd
+
+# fast build rule for target.
+testListnd/fast:
+	$(MAKE) -f CMakeFiles/testListnd.dir/build.make CMakeFiles/testListnd.dir/build
+.PHONY : testListnd/fast
+
+#=============================================================================
 # Target rules for targets named helloworld
 
 # Build rule for target.
@@ -163,6 +189,168 @@ bin/helloworld.cpp.s:
 	$(MAKE) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/bin/helloworld.cpp.s
 .PHONY : bin/helloworld.cpp.s
 
+bin/testListnd.o: bin/testListnd.cpp.o
+
+.PHONY : bin/testListnd.o
+
+# target to build an object file
+bin/testListnd.cpp.o:
+	$(MAKE) -f CMakeFiles/testListnd.dir/build.make CMakeFiles/testListnd.dir/bin/testListnd.cpp.o
+.PHONY : bin/testListnd.cpp.o
+
+bin/testListnd.i: bin/testListnd.cpp.i
+
+.PHONY : bin/testListnd.i
+
+# target to preprocess a source file
+bin/testListnd.cpp.i:
+	$(MAKE) -f CMakeFiles/testListnd.dir/build.make CMakeFiles/testListnd.dir/bin/testListnd.cpp.i
+.PHONY : bin/testListnd.cpp.i
+
+bin/testListnd.s: bin/testListnd.cpp.s
+
+.PHONY : bin/testListnd.s
+
+# target to generate assembly for a file
+bin/testListnd.cpp.s:
+	$(MAKE) -f CMakeFiles/testListnd.dir/build.make CMakeFiles/testListnd.dir/bin/testListnd.cpp.s
+.PHONY : bin/testListnd.cpp.s
+
+bin/testSort.o: bin/testSort.cpp.o
+
+.PHONY : bin/testSort.o
+
+# target to build an object file
+bin/testSort.cpp.o:
+	$(MAKE) -f CMakeFiles/testSort.dir/build.make CMakeFiles/testSort.dir/bin/testSort.cpp.o
+.PHONY : bin/testSort.cpp.o
+
+bin/testSort.i: bin/testSort.cpp.i
+
+.PHONY : bin/testSort.i
+
+# target to preprocess a source file
+bin/testSort.cpp.i:
+	$(MAKE) -f CMakeFiles/testSort.dir/build.make CMakeFiles/testSort.dir/bin/testSort.cpp.i
+.PHONY : bin/testSort.cpp.i
+
+bin/testSort.s: bin/testSort.cpp.s
+
+.PHONY : bin/testSort.s
+
+# target to generate assembly for a file
+bin/testSort.cpp.s:
+	$(MAKE) -f CMakeFiles/testSort.dir/build.make CMakeFiles/testSort.dir/bin/testSort.cpp.s
+.PHONY : bin/testSort.cpp.s
+
+src/fastVOA.o: src/fastVOA.cpp.o
+
+.PHONY : src/fastVOA.o
+
+# target to build an object file
+src/fastVOA.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/fastVOA.cpp.o
+.PHONY : src/fastVOA.cpp.o
+
+src/fastVOA.i: src/fastVOA.cpp.i
+
+.PHONY : src/fastVOA.i
+
+# target to preprocess a source file
+src/fastVOA.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/fastVOA.cpp.i
+.PHONY : src/fastVOA.cpp.i
+
+src/fastVOA.s: src/fastVOA.cpp.s
+
+.PHONY : src/fastVOA.s
+
+# target to generate assembly for a file
+src/fastVOA.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/fastVOA.cpp.s
+.PHONY : src/fastVOA.cpp.s
+
+src/firstMomentEstimator.o: src/firstMomentEstimator.cpp.o
+
+.PHONY : src/firstMomentEstimator.o
+
+# target to build an object file
+src/firstMomentEstimator.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o
+.PHONY : src/firstMomentEstimator.cpp.o
+
+src/firstMomentEstimator.i: src/firstMomentEstimator.cpp.i
+
+.PHONY : src/firstMomentEstimator.i
+
+# target to preprocess a source file
+src/firstMomentEstimator.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.i
+.PHONY : src/firstMomentEstimator.cpp.i
+
+src/firstMomentEstimator.s: src/firstMomentEstimator.cpp.s
+
+.PHONY : src/firstMomentEstimator.s
+
+# target to generate assembly for a file
+src/firstMomentEstimator.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.s
+.PHONY : src/firstMomentEstimator.cpp.s
+
+src/frobeniusNorm.o: src/frobeniusNorm.cpp.o
+
+.PHONY : src/frobeniusNorm.o
+
+# target to build an object file
+src/frobeniusNorm.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o
+.PHONY : src/frobeniusNorm.cpp.o
+
+src/frobeniusNorm.i: src/frobeniusNorm.cpp.i
+
+.PHONY : src/frobeniusNorm.i
+
+# target to preprocess a source file
+src/frobeniusNorm.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.i
+.PHONY : src/frobeniusNorm.cpp.i
+
+src/frobeniusNorm.s: src/frobeniusNorm.cpp.s
+
+.PHONY : src/frobeniusNorm.s
+
+# target to generate assembly for a file
+src/frobeniusNorm.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.s
+.PHONY : src/frobeniusNorm.cpp.s
+
+src/listnd.o: src/listnd.cpp.o
+
+.PHONY : src/listnd.o
+
+# target to build an object file
+src/listnd.cpp.o:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/listnd.cpp.o
+.PHONY : src/listnd.cpp.o
+
+src/listnd.i: src/listnd.cpp.i
+
+.PHONY : src/listnd.i
+
+# target to preprocess a source file
+src/listnd.cpp.i:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/listnd.cpp.i
+.PHONY : src/listnd.cpp.i
+
+src/listnd.s: src/listnd.cpp.s
+
+.PHONY : src/listnd.s
+
+# target to generate assembly for a file
+src/listnd.cpp.s:
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/listnd.cpp.s
+.PHONY : src/listnd.cpp.s
+
 src/vecnd.o: src/vecnd.cpp.o
 
 .PHONY : src/vecnd.o
@@ -198,11 +386,31 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... testSort"
+	@echo "... testListnd"
 	@echo "... helloworld"
 	@echo "... DS_core"
 	@echo "... bin/helloworld.o"
 	@echo "... bin/helloworld.i"
 	@echo "... bin/helloworld.s"
+	@echo "... bin/testListnd.o"
+	@echo "... bin/testListnd.i"
+	@echo "... bin/testListnd.s"
+	@echo "... bin/testSort.o"
+	@echo "... bin/testSort.i"
+	@echo "... bin/testSort.s"
+	@echo "... src/fastVOA.o"
+	@echo "... src/fastVOA.i"
+	@echo "... src/fastVOA.s"
+	@echo "... src/firstMomentEstimator.o"
+	@echo "... src/firstMomentEstimator.i"
+	@echo "... src/firstMomentEstimator.s"
+	@echo "... src/frobeniusNorm.o"
+	@echo "... src/frobeniusNorm.i"
+	@echo "... src/frobeniusNorm.s"
+	@echo "... src/listnd.o"
+	@echo "... src/listnd.i"
+	@echo "... src/listnd.s"
 	@echo "... src/vecnd.o"
 	@echo "... src/vecnd.i"
 	@echo "... src/vecnd.s"

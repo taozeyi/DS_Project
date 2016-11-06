@@ -6,15 +6,15 @@
 #include "vecnd.h"
 #include "listnd.h"
 
-vecnd fastVOA(std::vector<vecnd> dataset,
-		int t, int s1,int s2);
+vecnd fastVOA(std::vector<vecnd> dataset, int t, int s1,int s2);
 
-std::vector<listnd> randomProjection(std::vector<vecnd> dataset,
-		int t);
+vecnd vectorMedian(std::vector<vecnd> vectorset); 
 
-vecnd firstMomentEstimator(std::vector<listnd> listset,
-		int t, size_t n);
+vecnd squaredSumOfFrobNorm(std::vector<listnd> listset, int t, size_t n, int s1);
 
-vecnd frobeniusNorm(std::vector<listnd> listset,
-		int t, size_t n);
+std::vector<listnd> randomProjection(std::vector<vecnd> dataset, int t);
+
+vecnd firstMomentEstimator(std::vector<listnd> listset, int t, size_t n);
+
+vecnd frobeniusNorm(std::vector<listnd> listset, int t, size_t n);
 #endif
