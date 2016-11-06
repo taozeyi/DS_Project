@@ -5,19 +5,14 @@
 // Constructor //
 /////////////////
 vecnd::vecnd(void){
+	_attrs = NULL;
 }
 
 vecnd::vecnd(int size){
-	_attrs.resize(size);
+	_attrs.reset(new value_type[size]);
 }
 vecnd::vecnd(const vecnd& v){
-	_attrs = v._attrs;
-}
-vecnd::vecnd(std::vector<value_type> v){
-	_attrs = v;
-}
-vecnd::vecnd(std::vector<value_type> v, int entry, float value){
-
+	std::copy(v.begin(), v.end(), begin());
 }
 
 ////////////////
