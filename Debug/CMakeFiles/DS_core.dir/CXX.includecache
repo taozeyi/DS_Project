@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/vecnd.h
+ostream
+-
+vector
+-
+cmath
+-
+algorithm
+-
+
+/Users/zxdan/Desktop/DS_Project/src/vecnd.cpp
+algorithm
+-
+vecnd.h
+/Users/zxdan/Desktop/DS_Project/src/vecnd.h
+
