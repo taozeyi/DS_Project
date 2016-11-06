@@ -208,6 +208,13 @@ vecnd& vecnd::normalize(void){
 	return *this;
 }
 
+vecnd& vecnd::square(void){
+	std::for_each(begin(), end(), [](reference val){
+		val = val*val;
+	});
+	return *this;
+}
+
 /////////////
 // Private //
 /////////////

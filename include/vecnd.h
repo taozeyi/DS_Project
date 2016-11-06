@@ -80,7 +80,7 @@ class vecnd{
 	///////////////
 	vecnd& abs(void);
 	vecnd& normalize(void);
-
+	vecnd& square(void);
 	/////////////
 	// Friends //
 	/////////////
