@@ -57,9 +57,105 @@ include CMakeFiles/DS_core.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DS_core.dir/flags.make
 
+CMakeFiles/DS_core.dir/src/fastVOA.cpp.o: CMakeFiles/DS_core.dir/flags.make
+CMakeFiles/DS_core.dir/src/fastVOA.cpp.o: ../src/fastVOA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DS_core.dir/src/fastVOA.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DS_core.dir/src/fastVOA.cpp.o -c /Users/zeyitao/Documents/DS_Project/src/fastVOA.cpp
+
+CMakeFiles/DS_core.dir/src/fastVOA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_core.dir/src/fastVOA.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeyitao/Documents/DS_Project/src/fastVOA.cpp > CMakeFiles/DS_core.dir/src/fastVOA.cpp.i
+
+CMakeFiles/DS_core.dir/src/fastVOA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_core.dir/src/fastVOA.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeyitao/Documents/DS_Project/src/fastVOA.cpp -o CMakeFiles/DS_core.dir/src/fastVOA.cpp.s
+
+CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.requires:
+
+.PHONY : CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.requires
+
+CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.provides: CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.provides.build
+.PHONY : CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.provides
+
+CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.provides.build: CMakeFiles/DS_core.dir/src/fastVOA.cpp.o
+
+
+CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o: CMakeFiles/DS_core.dir/flags.make
+CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o: ../src/firstMomentEstimator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o -c /Users/zeyitao/Documents/DS_Project/src/firstMomentEstimator.cpp
+
+CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeyitao/Documents/DS_Project/src/firstMomentEstimator.cpp > CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.i
+
+CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeyitao/Documents/DS_Project/src/firstMomentEstimator.cpp -o CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.s
+
+CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.requires:
+
+.PHONY : CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.requires
+
+CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.provides: CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.provides.build
+.PHONY : CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.provides
+
+CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.provides.build: CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o
+
+
+CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o: CMakeFiles/DS_core.dir/flags.make
+CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o: ../src/frobeniusNorm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o -c /Users/zeyitao/Documents/DS_Project/src/frobeniusNorm.cpp
+
+CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeyitao/Documents/DS_Project/src/frobeniusNorm.cpp > CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.i
+
+CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeyitao/Documents/DS_Project/src/frobeniusNorm.cpp -o CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.s
+
+CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.requires:
+
+.PHONY : CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.requires
+
+CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.provides: CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.provides.build
+.PHONY : CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.provides
+
+CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.provides.build: CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o
+
+
+CMakeFiles/DS_core.dir/src/listnd.cpp.o: CMakeFiles/DS_core.dir/flags.make
+CMakeFiles/DS_core.dir/src/listnd.cpp.o: ../src/listnd.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DS_core.dir/src/listnd.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DS_core.dir/src/listnd.cpp.o -c /Users/zeyitao/Documents/DS_Project/src/listnd.cpp
+
+CMakeFiles/DS_core.dir/src/listnd.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_core.dir/src/listnd.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeyitao/Documents/DS_Project/src/listnd.cpp > CMakeFiles/DS_core.dir/src/listnd.cpp.i
+
+CMakeFiles/DS_core.dir/src/listnd.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_core.dir/src/listnd.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeyitao/Documents/DS_Project/src/listnd.cpp -o CMakeFiles/DS_core.dir/src/listnd.cpp.s
+
+CMakeFiles/DS_core.dir/src/listnd.cpp.o.requires:
+
+.PHONY : CMakeFiles/DS_core.dir/src/listnd.cpp.o.requires
+
+CMakeFiles/DS_core.dir/src/listnd.cpp.o.provides: CMakeFiles/DS_core.dir/src/listnd.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/src/listnd.cpp.o.provides.build
+.PHONY : CMakeFiles/DS_core.dir/src/listnd.cpp.o.provides
+
+CMakeFiles/DS_core.dir/src/listnd.cpp.o.provides.build: CMakeFiles/DS_core.dir/src/listnd.cpp.o
+
+
 CMakeFiles/DS_core.dir/src/vecnd.cpp.o: CMakeFiles/DS_core.dir/flags.make
 CMakeFiles/DS_core.dir/src/vecnd.cpp.o: ../src/vecnd.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DS_core.dir/src/vecnd.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DS_core.dir/src/vecnd.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DS_core.dir/src/vecnd.cpp.o -c /Users/zeyitao/Documents/DS_Project/src/vecnd.cpp
 
 CMakeFiles/DS_core.dir/src/vecnd.cpp.i: cmake_force
@@ -83,15 +179,23 @@ CMakeFiles/DS_core.dir/src/vecnd.cpp.o.provides.build: CMakeFiles/DS_core.dir/sr
 
 # Object files for target DS_core
 DS_core_OBJECTS = \
+"CMakeFiles/DS_core.dir/src/fastVOA.cpp.o" \
+"CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o" \
+"CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o" \
+"CMakeFiles/DS_core.dir/src/listnd.cpp.o" \
 "CMakeFiles/DS_core.dir/src/vecnd.cpp.o"
 
 # External object files for target DS_core
 DS_core_EXTERNAL_OBJECTS =
 
+libDS_core.a: CMakeFiles/DS_core.dir/src/fastVOA.cpp.o
+libDS_core.a: CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o
+libDS_core.a: CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o
+libDS_core.a: CMakeFiles/DS_core.dir/src/listnd.cpp.o
 libDS_core.a: CMakeFiles/DS_core.dir/src/vecnd.cpp.o
 libDS_core.a: CMakeFiles/DS_core.dir/build.make
 libDS_core.a: CMakeFiles/DS_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libDS_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libDS_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/DS_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DS_core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -100,6 +204,10 @@ CMakeFiles/DS_core.dir/build: libDS_core.a
 
 .PHONY : CMakeFiles/DS_core.dir/build
 
+CMakeFiles/DS_core.dir/requires: CMakeFiles/DS_core.dir/src/fastVOA.cpp.o.requires
+CMakeFiles/DS_core.dir/requires: CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o.requires
+CMakeFiles/DS_core.dir/requires: CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o.requires
+CMakeFiles/DS_core.dir/requires: CMakeFiles/DS_core.dir/src/listnd.cpp.o.requires
 CMakeFiles/DS_core.dir/requires: CMakeFiles/DS_core.dir/src/vecnd.cpp.o.requires
 
 .PHONY : CMakeFiles/DS_core.dir/requires

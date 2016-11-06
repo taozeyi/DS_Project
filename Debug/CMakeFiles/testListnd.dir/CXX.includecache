@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/listnd.h
+iostream
+-
+vector
+-
+
+/Users/zeyitao/Documents/DS_Project/bin/testListnd.cpp
+listnd.h
+/Users/zeyitao/Documents/DS_Project/bin/listnd.h
+iostream
+-
+
