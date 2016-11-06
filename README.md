@@ -1,9 +1,9 @@
-Angle Based Outlier Dection Project(ABOD)
+## Angle Based Outlier Dection Project(ABOD)
 
 ## Hello world!
 This is ongoing project.
 ## Inroduction
-This is the Course Project of CSCI 780 Data Science[1], Computer Science Department of the College of William and Mary, 2016 Fall Supervised by Dr. Zhenming Liu[2]. This project is the implementation described in "A Near-linear Time Approximation Algorithm for Angle-based Outlier Detection in High-dimensional Data" by Ninh Pham & Rasmus Pagh[3].
+This is the Course Project of [CSCI 780 Data Science][1], Computer Science Department of the College of William and Mary, 2016 Fall Supervised by [Dr. Zhenming Liu][2]. This project is the implementation described in "A Near-linear Time Approximation Algorithm for Angle-based Outlier Detection in High-dimensional Data" by [Ninh Pham & Rasmus Pagh][3].
 ## Usage
 
 ## Implementation Notes
