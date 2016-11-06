@@ -7,6 +7,7 @@
 class item
 {
 	public:
+	item(void);
 	item(size_t point_id,float proj);
 	item(const item& it);
 
@@ -34,23 +35,26 @@ class item
 	float _projection;
 
 };
+
 class listnd
 {
+	public:
 	typedef item value_type;
 	typedef value_type& reference;
 	typedef const value_type& const_reference;
-	typedef std::shared_ptr<value_type[]>::pointer iterator;
-	typedef std::shared_ptr<const value_type[]>::pointer const_iterator;
+	typedef value_type* iterator;
+	typedef const value_type* const_iterator;
 	typedef size_t difference_type;
 	typedef size_t size_type;
 
-	public:
 	listnd(size_t n);
 	listnd(const listnd& lt);
 	listnd(listnd&& lt);
 
-	list& operator=(const listnd& lt);
-        
+	listnd& operator=(const listnd& lt);
+	reference operator[](size_t i);
+        const_reference operator[](size_t i) const;
+
 	iterator begin(void);
 	const_iterator begin(void) const;
 
@@ -59,7 +63,7 @@ class listnd
 	
 	void append(float projection);
 	size_t size(void) const;
-	iterator sort();
+	void sorted();
 
         friend std::ostream& operator<<(std::ostream& s,const listnd& lt)
 	{
@@ -70,7 +74,7 @@ class listnd
 	private:
 	void _swap(listnd& lt);
 
-	std::shared_ptr<value_type[]> _items; 
+	std::shared_ptr<value_type> _items; 
         size_t _size;
         size_t _index;
 };

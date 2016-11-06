@@ -1,5 +1,12 @@
+#include <cassert>
+#include "util.h"
 #include "listnd.h"
 
+item::item(void)
+{
+	_point_id=0;
+	_projection=0;
+}
 item::item(size_t point_id,float proj)
 {
 	_point_id=point_id;
@@ -57,7 +64,7 @@ void item::_swap(item& it)
 
 listnd::listnd(size_t n)
 {
-	_items.reset(new value_type[n]);
+	_items=std::shared_ptr<item>(new item[n],std::default_delete<item>());
 	_size=n;
 	_index=0;
 }
@@ -101,22 +108,37 @@ listnd::iterator listnd::end(void)
 
 listnd::const_iterator listnd::end(void) const
 {
-	return _items.get()+_size();
+	return _items.get()+_size;
 }
 
+listnd::reference listnd::operator[](size_t i)
+{
+	return _items.get()[i];
+}
+
+listnd::const_reference listnd::operator[](size_t i) const
+{
+	return _items.get()[i];
+}
 void listnd::append(float projection)
 {
-	assert(_size-index);
-	items[index]=item(index,projection);
-	index++;
+	assert(_size-_index);
+	_items.get()[_index]=item(_index,projection);
+	_index++;
 }
 size_t listnd::size(void) const
 {
 	return _size;
 }
 
-listnd::iterator listnd::sort()
+void listnd::sorted()
 {
-	std::shared_ptr<value_type[]> sorted(new value_type[_size]);
-	std::shared_ptr<value_type[]> left.reset();
+	_items=sort<item>(begin(),end());
+}
+
+void listnd::_swap(listnd& lt)
+{
+	std::swap(_items,lt._items);
+	std::swap(_size,lt._size);
+	std::swap(_index,lt._index);
 }
