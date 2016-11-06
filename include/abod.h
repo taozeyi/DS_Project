@@ -6,7 +6,7 @@
 #include "vecnd.h"
 #include "listnd.h"
 
-std::vector<vecnd::value_type> fastVOA(std::vector<vecnd> dataset,
+vecnd fastVOA(std::vector<vecnd> dataset,
 		int t, int s1,int s2);
 
 std::vector<listnd> randomProjection(std::vector<vecnd> dataset,
