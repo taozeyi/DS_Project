@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zxdan/Desktop/DS_Project/src/vecnd.cpp" "/Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles/DS_core.dir/src/vecnd.cpp.o"
+  "/Users/zeyitao/Documents/DS_Project/src/vecnd.cpp" "/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles/DS_core.dir/src/vecnd.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

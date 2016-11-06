@@ -54,10 +54,10 @@ RM = /usr/local/Cellar/cmake/3.5.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zxdan/Desktop/DS_Project
+CMAKE_SOURCE_DIR = /Users/zeyitao/Documents/DS_Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zxdan/Desktop/DS_Project/Debug
+CMAKE_BINARY_DIR = /Users/zeyitao/Documents/DS_Project/Debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/helloworld.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /Users/zxdan/Desktop/DS_Project/Debug
 CMakeFiles/helloworld.dir/all: CMakeFiles/DS_core.dir/all
 	$(MAKE) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/depend
 	$(MAKE) -f CMakeFiles/helloworld.dir/build.make CMakeFiles/helloworld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles --progress-num=3,4 "Built target helloworld"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=3,4 "Built target helloworld"
 .PHONY : CMakeFiles/helloworld.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/helloworld.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/helloworld.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/helloworld.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles 0
 .PHONY : CMakeFiles/helloworld.dir/rule
 
 # Convenience name for target.
@@ -103,7 +103,7 @@ clean: CMakeFiles/helloworld.dir/clean
 CMakeFiles/DS_core.dir/all:
 	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/depend
 	$(MAKE) -f CMakeFiles/DS_core.dir/build.make CMakeFiles/DS_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles --progress-num=1,2 "Built target DS_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=1,2 "Built target DS_core"
 .PHONY : CMakeFiles/DS_core.dir/all
 
 # Include target in all.
@@ -113,9 +113,9 @@ all: CMakeFiles/DS_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DS_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DS_core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles 0
 .PHONY : CMakeFiles/DS_core.dir/rule
 
 # Convenience name for target.

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zxdan/Desktop/DS_Project/bin/helloworld.cpp" "/Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles/helloworld.dir/bin/helloworld.cpp.o"
+  "/Users/zeyitao/Documents/DS_Project/bin/helloworld.cpp" "/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles/helloworld.dir/bin/helloworld.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles/DS_core.dir/DependInfo.cmake"
+  "/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles/DS_core.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.5.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zxdan/Desktop/DS_Project
+CMAKE_SOURCE_DIR = /Users/zeyitao/Documents/DS_Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zxdan/Desktop/DS_Project/Debug
+CMAKE_BINARY_DIR = /Users/zeyitao/Documents/DS_Project/Debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DS_core.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/DS_core.dir/flags.make
 
 CMakeFiles/DS_core.dir/src/vecnd.cpp.o: CMakeFiles/DS_core.dir/flags.make
 CMakeFiles/DS_core.dir/src/vecnd.cpp.o: ../src/vecnd.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DS_core.dir/src/vecnd.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DS_core.dir/src/vecnd.cpp.o -c /Users/zxdan/Desktop/DS_Project/src/vecnd.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DS_core.dir/src/vecnd.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DS_core.dir/src/vecnd.cpp.o -c /Users/zeyitao/Documents/DS_Project/src/vecnd.cpp
 
 CMakeFiles/DS_core.dir/src/vecnd.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DS_core.dir/src/vecnd.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zxdan/Desktop/DS_Project/src/vecnd.cpp > CMakeFiles/DS_core.dir/src/vecnd.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeyitao/Documents/DS_Project/src/vecnd.cpp > CMakeFiles/DS_core.dir/src/vecnd.cpp.i
 
 CMakeFiles/DS_core.dir/src/vecnd.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DS_core.dir/src/vecnd.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zxdan/Desktop/DS_Project/src/vecnd.cpp -o CMakeFiles/DS_core.dir/src/vecnd.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeyitao/Documents/DS_Project/src/vecnd.cpp -o CMakeFiles/DS_core.dir/src/vecnd.cpp.s
 
 CMakeFiles/DS_core.dir/src/vecnd.cpp.o.requires:
 
@@ -91,7 +91,7 @@ DS_core_EXTERNAL_OBJECTS =
 libDS_core.a: CMakeFiles/DS_core.dir/src/vecnd.cpp.o
 libDS_core.a: CMakeFiles/DS_core.dir/build.make
 libDS_core.a: CMakeFiles/DS_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libDS_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libDS_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/DS_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DS_core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/DS_core.dir/clean:
 .PHONY : CMakeFiles/DS_core.dir/clean
 
 CMakeFiles/DS_core.dir/depend:
-	cd /Users/zxdan/Desktop/DS_Project/Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zxdan/Desktop/DS_Project /Users/zxdan/Desktop/DS_Project /Users/zxdan/Desktop/DS_Project/Debug /Users/zxdan/Desktop/DS_Project/Debug /Users/zxdan/Desktop/DS_Project/Debug/CMakeFiles/DS_core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/zeyitao/Documents/DS_Project/Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zeyitao/Documents/DS_Project /Users/zeyitao/Documents/DS_Project /Users/zeyitao/Documents/DS_Project/Debug /Users/zeyitao/Documents/DS_Project/Debug /Users/zeyitao/Documents/DS_Project/Debug/CMakeFiles/DS_core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/DS_core.dir/depend
 
