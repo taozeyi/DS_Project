@@ -11,15 +11,15 @@ class vecnd{
 	/////////////
 	// Typedef //
 	/////////////
-	typedef float									value_type;
-	typedef value_type&								reference;
-	typedef const value_type						const_reference;
-	typedef std::vector<value_type>::iterator		iterator;
-	typedef std::vector<value_type>::const_iterator const_iterator;
+	typedef float											value_type;
+	typedef value_type&										reference;
+	typedef const value_type								const_reference;
+	typedef std::unique_ptr<value_type[]>::pointer			iterator;
+	typedef std::unique_ptr<const value_type[]>::pointer	const_iterator;
 	/////////////////
 	// Data Member //
 	/////////////////
-	std :: vector<vecnd::value_type> _attrs;
+	std::unique_ptr<value_type[]> _attrs;
 
 	public:
 	////////////////
@@ -28,8 +28,10 @@ class vecnd{
 	vecnd(void);
 	vecnd(int size);
 	vecnd(const vecnd& v);
-	vecnd(std::vector<vecnd::value_type> v);
-	vecnd(std::vector<vecnd::value_type> v, int entry, float value);
+
+	//vecnd(std::unique_ptr<value_type[]> v);
+	//vecnd(std::unique_ptr<value_type[]> v, int entry, float value);
+
 	///////////////
 	// Inspector //
 	///////////////
