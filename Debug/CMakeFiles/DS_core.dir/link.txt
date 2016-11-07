@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libDS_core.a  CMakeFiles/DS_core.dir/src/fastVOA.cpp.o CMakeFiles/DS_core.dir/src/firstMomentEstimator.cpp.o CMakeFiles/DS_core.dir/src/frobeniusNorm.cpp.o CMakeFiles/DS_core.dir/src/listnd.cpp.o CMakeFiles/DS_core.dir/src/vecnd.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libDS_core.a
