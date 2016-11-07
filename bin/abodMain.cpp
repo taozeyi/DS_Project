@@ -14,7 +14,7 @@ bool flag_generation =									false;
 size_t selected_number_of_points =						10000;
 int selected_dimension_of_point =						10;
 int max_ouliter_number =								10;
-char* dataset_filename =								NULL;
+char* file_path =										NULL;
 
 void usage(){
 
@@ -69,7 +69,6 @@ void initialization(int argc, char** argv){
 				}
 				else if(isprint(optopt))
 					cerr << "Unknown Flag: "<<(char)optopt <<".\n";
-					usage();
 				else
 					cerr << "Unknown Flag  " <<endl;
 					usage();
@@ -81,7 +80,7 @@ void initialization(int argc, char** argv){
 		if(!flag_n)
 			cerr << "Number of expected data point not set. Using default n = " <<selected_number_of_points <<endl;
 		if(!flag_d)
-			cerr << "Number of expected data point dimension not set. Using default d = " << selected_dimension_of_points <<endl;
+			cerr << "Number of expected data point dimension not set. Using default d = " << selected_dimension_of_point <<endl;
 	}
 	else{
 		if(!flag_r)
