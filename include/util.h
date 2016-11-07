@@ -1,9 +1,15 @@
 #include <iostream>
 #include <memory>
 #include <algorithm>
+#include <random>
+
+#include "vecnd.h"
+
+static std::random_device rd;
+static std::mt19937 rnd;
 
 template <typename T>
-std::shared_ptr<T> copy(T* begin,
+static std::shared_ptr<T> copy(T* begin,
 		T* end)
 {
 	std::shared_ptr<T> result(new T[std::distance(begin,end)],std::default_delete<T>());
@@ -14,7 +20,7 @@ std::shared_ptr<T> copy(T* begin,
 	return result;
 }
 template <typename T>
-std::shared_ptr<T> sort(T* begin,
+static std::shared_ptr<T> sort(T* begin,
 		T* end)
 {
 	size_t size=std::distance(begin,end);
@@ -62,4 +68,24 @@ std::shared_ptr<T> sort(T* begin,
 		r++;
 	}
 	return result;
-}	
+}
+
+static float randomFloat(float lower=0.0f, float upper=1.0f)
+{
+	std::uniform_real_distribution<float> dist(lower,upper);
+	return dist(rnd);
+}
+static int randomInt(int lower=0,int upper=1)
+{
+	std::uniform_int_distribution<int> dist(lower,upper);
+	return dist(rnd);
+}
+static vecnd randomVector(size_t n,float lower=0.0f,float upper=1.0f)
+{
+	vecnd v(n);
+	for(int i=0;i<n;i++)
+	{
+		v[i]=randomFloat(lower,upper);
+	}
+	return v;
+}
