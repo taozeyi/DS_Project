@@ -69,5 +69,5 @@ vecnd squaredSumOfFrobNorm(std::vector<listnd> listset, int t, size_t n, int s1)
   */
 
 vecnd vectorMedian(std::vector<vecnd> vectorset){
-
+	
 }
