@@ -71,10 +71,13 @@ listnd::listnd(size_t n)
 
 listnd::listnd(const listnd& lt)
 {
+	_size=lt.size();
+	_items=std::shared_ptr<item>(new item[_size],std::default_delete<item>());
 	std::transform(lt.begin(),lt.end(),begin(),[](const_reference v)
 			{
 				return v;
 			});
+	_index=_size;
 }
 
 listnd::listnd(listnd&& lt)
@@ -84,10 +87,14 @@ listnd::listnd(listnd&& lt)
 
 listnd& listnd::operator=(const listnd& lt)
 {
+	_size=lt.size();
+	_items=std::shared_ptr<item>(new item[_size],std::default_delete<item>());
+
 	std::transform(lt.begin(),lt.end(),begin(),[](const_reference v)
 			{
 				return v;
 			});
+	_index=_size;
 	return *this;
 }
 
