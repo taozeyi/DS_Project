@@ -17,4 +17,6 @@ std::vector<listnd> randomProjection(std::vector<vecnd> dataset, int t);
 vecnd firstMomentEstimator(std::vector<listnd> listset, int t, size_t n);
 
 vecnd frobeniusNorm(std::vector<listnd> listset, int t, size_t n);
+
+vecnd pointWiseIndependentVector(size_t n);
 #endif

@@ -2,6 +2,11 @@
 #include <vector>
 #include <algorithm>
 
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <climits>
+
 #include "abod.h"
 #include "vecnd.h"
 #include "listnd.h"
@@ -11,10 +16,11 @@
 using namespace std;
 
 bool flag_generation =									false;
-size_t selected_number_of_points =						10000;
+int selected_number_of_points =						1000;
 int selected_dimension_of_point =						10;
 int max_ouliter_number =								10;
 char* file_path =										NULL;
+char* test_file = "../data/kddcup_1.5M_znorm.csv";
 
 void usage(){
 
@@ -89,14 +95,88 @@ void initialization(int argc, char** argv){
 	}
 }
 
+/**
+  *
+  *
+  */
+
+void readDataFromDisk(char* fileName, std::vector<vecnd>& dataset, int desired_point_size, int desired_dimensions){
+	
+	int attr_size = 0;
+	int point_size = 0;
+	int current_point_id = 0;
+	int current_attr_position = 0;
+
+
+	ifstream input_file(fileName);
+
+	std::string line;
+
+	if(!getline(input_file, line)){
+		cerr << "Unable to read input file: " << fileName << endl;
+		exit(1);
+	}
+	else{
+		std::istringstream iss(line);
+		if(!(iss >> point_size >> attr_size)){
+			cerr << "Invalid Header format" << endl;
+		}
+	}
+
+	dataset.resize(desired_point_size);
+
+
+	while(std::getline(input_file, line) && current_point_id < desired_point_size){
+
+		std::istringstream iss(line);
+		//std::cout<<line<<endl;
+		//vecnd temp(1);
+		dataset[current_point_id]=std::move(vecnd(desired_dimensions));
+
+		for(current_attr_position = 0; current_attr_position < desired_dimensions; current_attr_position++){
+			//std::cout<<"true!"<<std::endl;
+			iss >> dataset[current_point_id][current_attr_position];
+			//std::cout<<"true!"<<std::endl;
+			//std::cout<< temp[current_attr_position]<< " "<<std::endl;
+			//temp[1] = 1.0f;
+			//temp[2] = 2.0f;
+			/*if(!iss&&!iss.eof()){
+				//cout << "I should not in here" << endl;
+				cerr << "File " << fileName<< " is corrupted." <<endl;
+				exit(1);
+			}*/
+		}
+		//std::cout<<"fuck!"<<std::endl;
+
+		std::cout<<"data set size now"<<dataset.size()<<std::endl;
+		//std::cout<<"vecnd size is "<< temp._size<<std::endl;
+		std::cout<<dataset[0]<<std::endl;
+		//std::cout<<temp<<std::endl;
+		std::cout<<"insert point numb"<<current_point_id<<std::endl;
+		//dataset[current_point_id] = std::move(temp);
+
+
+		//dataset.push_back(std::move(temp));
+		//dataset.emplace_back(temp);
+
+		current_point_id++;
+		std::cout<<"insert point numb"<<current_point_id<<std::endl;
+	}
+
+}  
+
 
 int main (int argc, char** argv){
-	initialization(argc, argv);
+	//initialization(argc, argv);
+	std::vector<vecnd> dataset;
+
+	vecnd var;
 	if(flag_generation){
 		GaussianMixtureGenerator();
 	}
 	else{
-
-
+		readDataFromDisk(test_file, dataset, selected_number_of_points, selected_dimension_of_point);
+		//var = fastVOA(dataset, 10, 10, 10);
 	}
+	std::cout << var;
 }
