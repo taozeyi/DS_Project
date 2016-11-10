@@ -130,7 +130,7 @@ void readDataFromDisk(char* fileName, std::vector<vecnd>& dataset, int desired_p
 
 		std::istringstream iss(line);
 		//std::cout<<line<<endl;
-		//vecnd temp(1);
+		//vecnd temp(10);
 		dataset[current_point_id]=std::move(vecnd(desired_dimensions));
 
 		for(current_attr_position = 0; current_attr_position < desired_dimensions; current_attr_position++){
@@ -150,7 +150,7 @@ void readDataFromDisk(char* fileName, std::vector<vecnd>& dataset, int desired_p
 
 		std::cout<<"data set size now"<<dataset.size()<<std::endl;
 		//std::cout<<"vecnd size is "<< temp._size<<std::endl;
-		std::cout<<dataset[0]<<std::endl;
+		std::cout<<dataset[current_point_id]<<std::endl;
 		//std::cout<<temp<<std::endl;
 		std::cout<<"insert point numb"<<current_point_id<<std::endl;
 		//dataset[current_point_id] = std::move(temp);
@@ -171,12 +171,13 @@ int main (int argc, char** argv){
 	std::vector<vecnd> dataset;
 
 	vecnd var;
+
 	if(flag_generation){
 		GaussianMixtureGenerator();
 	}
 	else{
 		readDataFromDisk(test_file, dataset, selected_number_of_points, selected_dimension_of_point);
-		//var = fastVOA(dataset, 10, 10, 10);
+		var = fastVOA(dataset, 10, 10, 10);
 	}
 	std::cout << var;
 }
