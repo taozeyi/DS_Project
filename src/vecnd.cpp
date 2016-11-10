@@ -1,5 +1,5 @@
 #include <algorithm>
-
+#include <iostream>
 #include "vecnd.h"
 
 /////////////////
@@ -11,7 +11,7 @@ vecnd::vecnd(void){
 }
 
 vecnd::vecnd(size_t size){
-	_attrs.reset(new value_type[size]);
+	_attrs = std::shared_ptr<value_type>(new value_type[size], std::default_delete<value_type>());
 	_size = size;
 }
 vecnd::vecnd(const vecnd& v){
@@ -40,7 +40,12 @@ vecnd::const_iterator vecnd::end(void) const{
 // Operator //
 //////////////
 vecnd::reference vecnd::operator[](size_t index){
-	return _attrs[index];
+	return _attrs.get()[index];
+}
+
+vecnd::const_reference vecnd::operator[](size_t index) const
+{
+	return _attrs.get()[index];
 }
 
 vecnd& vecnd::operator=(const vecnd& v){
@@ -58,7 +63,7 @@ bool vecnd::operator==(const vecnd& v) const{
 		return false;
 	}
 	for(size_t i=0; i < size(); i++){
-		if(_attrs[i] != v._attrs[i]){
+		if(_attrs.get()[i] != v._attrs.get()[i]){
 			return false;
 		}
 	}
@@ -68,7 +73,7 @@ bool vecnd::operator==(const vecnd& v) const{
 vecnd vecnd::operator-(void) const{
 	vecnd result;
 	for (int i = 0; i < size(); i++){
-		result._attrs[i] = _attrs[i] * -1;
+		result._attrs.get()[i] = _attrs.get()[i] * -1;
 	}
 	return result;
 }
@@ -162,6 +167,7 @@ vecnd& vecnd::operator*=(vecnd::value_type scale){
 	return *this;
 }
 vecnd& vecnd::operator/=(vecnd::value_type scale){
+	std::cout << "divide scale"<<std::endl;
 	std::for_each(begin(), end(), [&](reference a)
 	{
 		a/=scale;
@@ -172,24 +178,29 @@ vecnd& vecnd::operator/=(vecnd::value_type scale){
 // Method  //
 /////////////
 vecnd::value_type vecnd::dot(const vecnd& v) const{
-	vecnd::value_type dot=0.0f;
-	vecnd result;
+	vecnd::value_type dot_value=0.0f;
+	vecnd result(size());
+
 	std::transform(begin(), end(), v.begin(), result.begin(),[](const_reference a, const_reference b)
 	{
 		return a*b;
 	});
+
 	std::for_each(result.begin(), result.end(), [&](reference a)
 	{
-		dot+=a;
+		dot_value+=a;
 	});
-	return dot;
+
+	return dot_value;
 }
 
 vecnd::value_type vecnd::squared_length(void) const{
+	std::cout <<"start cal the vector squared length"<< std::endl;
 	return dot(*this);
 }
 
 vecnd::value_type vecnd::length(void) const{
+	std::cout <<"start cal the vector length"<< std::endl;
 	return sqrt(squared_length());
 }
 
@@ -204,7 +215,9 @@ vecnd& vecnd::abs(void){
 }
 
 vecnd& vecnd::normalize(void){
+	std::cout <<"start normalize the vector"<< std::endl;
 	*this /= length();
+	std::cout << "finish normalize the vector"<< std::endl;
 	return *this;
 }
 
@@ -219,7 +232,12 @@ vecnd& vecnd::square(void){
 // Private //
 /////////////
 void vecnd::_assign(const vecnd& v){
-	std::copy(v.begin(), v.end(), begin());
+
+	_attrs = std::shared_ptr<value_type>(new value_type[v.size()], std::default_delete<value_type>());
+	std::transform(v.begin(), v.end(), begin(),[](const_reference a)
+	{
+		return a;
+	});
 	_size = v._size;
 }
 void vecnd::_swap(vecnd& v){

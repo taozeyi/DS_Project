@@ -14,12 +14,12 @@ class vecnd{
 	typedef float											value_type;
 	typedef value_type&										reference;
 	typedef const value_type								const_reference;
-	typedef std::unique_ptr<value_type[]>::pointer			iterator;
-	typedef std::unique_ptr<const value_type[]>::pointer	const_iterator;
+	typedef value_type*										iterator;
+	typedef const value_type*								const_iterator;
 	/////////////////
 	// Data Member //
 	/////////////////
-	std::unique_ptr<value_type[]> _attrs;
+	std::shared_ptr<value_type> _attrs;
 	size_t _size;
 
 	public:
@@ -46,6 +46,7 @@ class vecnd{
 	// Operators //
 	///////////////
 	reference operator[](size_t index);
+	const_reference operator[](size_t index) const;
 
 	vecnd& operator=(const vecnd& v);
 	vecnd& operator=(vecnd&& v);

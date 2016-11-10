@@ -12,11 +12,15 @@
   * @return 
   */
 
-vecnd fastVOA(std::vector<vecnd> dataset, int t, int s1,int s2){
+vecnd fastVOA(std::vector<vecnd>& dataset, int t, int s1,int s2){
 
 	size_t data_size = dataset.size();
+	
+	std::cout << "fastVOA handle the dataset size of "<< data_size<<std::endl; 
 
 	std::vector<listnd> listOfRandomProjection = randomProjection(dataset, t);
+
+	std::cout << "list of Random Projection finished" << std::endl;
 
 	vecnd firstMomentEst = firstMomentEstimator(listOfRandomProjection, t, data_size);
 
