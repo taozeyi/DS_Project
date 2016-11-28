@@ -71,7 +71,7 @@ bool vecnd::operator==(const vecnd& v) const{
 }
 
 vecnd vecnd::operator-(void) const{
-	vecnd result;
+	vecnd result(size());
 	for (int i = 0; i < size(); i++){
 		result._attrs.get()[i] = _attrs.get()[i] * -1;
 	}
@@ -79,7 +79,7 @@ vecnd vecnd::operator-(void) const{
 }
 
 vecnd vecnd::operator+(const vecnd& v) const {
-	vecnd result;
+	vecnd result(size());
 	std::transform(begin(), end(), v.begin(), result.begin(),[](const_reference a, const_reference b)
 	{
 		return a+b;
@@ -88,7 +88,7 @@ vecnd vecnd::operator+(const vecnd& v) const {
 
 }
 vecnd vecnd::operator-(const vecnd& v) const {
-	vecnd result;
+	vecnd result(size());
 	std::transform(begin(), end(), v.begin(), result.begin(),[](const_reference a, const_reference b)
 	{
 		return a-b;
@@ -97,7 +97,7 @@ vecnd vecnd::operator-(const vecnd& v) const {
 
 }
 vecnd vecnd::operator*(const vecnd& v) const {
-	vecnd result;
+	vecnd result(size());
 	std::transform(begin(), end(), v.begin(), result.begin(),[](const_reference a, const_reference b)
 	{
 		return a*b;
@@ -106,7 +106,7 @@ vecnd vecnd::operator*(const vecnd& v) const {
 
 }
 vecnd vecnd::operator/(const vecnd& v) const {
-	vecnd result;
+	vecnd result(size());
 	std::transform(begin(), end(), v.begin(), result.begin(),[](const_reference a, const_reference b)
 	{
 		return a/b;
@@ -115,7 +115,7 @@ vecnd vecnd::operator/(const vecnd& v) const {
 
 }
 vecnd vecnd::operator*(vecnd::value_type scale) const{
-	vecnd result;
+	vecnd result(size());
 	std::transform(begin(), end(), result.begin(),[&](const_reference a)
 	{
 		return a*scale;
@@ -123,7 +123,7 @@ vecnd vecnd::operator*(vecnd::value_type scale) const{
 	return result;
 }
 vecnd vecnd::operator/(vecnd::value_type scale) const{
-	vecnd result;
+	vecnd result(size());
 	std::transform(begin(), end(), result.begin(),[&](const_reference a)
 	{
 		return a/scale;
@@ -167,7 +167,6 @@ vecnd& vecnd::operator*=(vecnd::value_type scale){
 	return *this;
 }
 vecnd& vecnd::operator/=(vecnd::value_type scale){
-	std::cout << "divide scale"<<std::endl;
 	std::for_each(begin(), end(), [&](reference a)
 	{
 		a/=scale;
@@ -195,12 +194,10 @@ vecnd::value_type vecnd::dot(const vecnd& v) const{
 }
 
 vecnd::value_type vecnd::squared_length(void) const{
-	std::cout <<"start cal the vector squared length"<< std::endl;
 	return dot(*this);
 }
 
 vecnd::value_type vecnd::length(void) const{
-	std::cout <<"start cal the vector length"<< std::endl;
 	return sqrt(squared_length());
 }
 
@@ -215,9 +212,7 @@ vecnd& vecnd::abs(void){
 }
 
 vecnd& vecnd::normalize(void){
-	std::cout <<"start normalize the vector"<< std::endl;
 	*this /= length();
-	std::cout << "finish normalize the vector"<< std::endl;
 	return *this;
 }
 

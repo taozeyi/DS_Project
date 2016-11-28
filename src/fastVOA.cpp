@@ -2,6 +2,7 @@
 #include <math.h>
 #include "abod.h"
 
+size_t count = 0;
 
 /**
   * The fastVOA implementation
@@ -24,19 +25,32 @@ vecnd fastVOA(std::vector<vecnd>& dataset, int t, int s1,int s2){
 
 	vecnd firstMomentEst = firstMomentEstimator(listOfRandomProjection, t, data_size);
 
-	vecnd medianFrobNormal(data_size);
+	std::cout << "firstMomentEstimator finished" << std::endl;
+
+	
+
 
 	vecnd varience(data_size);
 
 	std::vector<vecnd> yVector;
 
-	yVector.reserve(s2);
+	yVector.resize(s2);
+
+	std::cout << "sum of squared start to process" <<std::endl;
 
 	for(int i = 0; i < s2; i++){
+
+
 		yVector[i] = squaredSumOfFrobNorm (listOfRandomProjection, t, data_size, s1);
+		//std::cout << "element " << yVector[i] << std::endl; 
+		
 	}
+	//std::cout << "N should be s1*s2 " << count <<std::endl;
+	std::cout << "yVector generate" << std::endl;
 
 	vecnd secondMomentEst = vectorMedian(yVector);
+
+	std::cout << "median selection" << std::endl;
 
 	for(size_t j = 0; j<data_size; j++){
 
@@ -56,13 +70,20 @@ vecnd fastVOA(std::vector<vecnd>& dataset, int t, int s1,int s2){
   *
   */
 
-vecnd squaredSumOfFrobNorm(std::vector<listnd> listset, int t, size_t n, int s1){
-	vecnd square(n);
+vecnd squaredSumOfFrobNorm(std::vector<listnd>& listset, int t, size_t n, int s1){
+	vecnd squared(n);
 	for(int i = 0; i < s1; i++){
-		vecnd temp = frobeniusNorm(listset, t, n);
-		square += temp.square();
+		std::cout << "frobeniusNorm generate" << i <<std::endl;
+		squared += frobeniusNorm(listset, t, n).square();
+		//std::cout << temp << std::endl;
+		//std::cout << frobeniusNorm(listset, t, n)<< std::endl;
+		//std::cout << "frobeniusNorm successfully generate" <<std::endl;
+		//frobeniusNorm(listset, t, n).square();
+		count++;
+
 	}
-	return (square/s1);
+	return (squared/s1);
+	//return squared;
 }
 /**
   * This method is taking the median value of a vector list,
@@ -72,6 +93,10 @@ vecnd squaredSumOfFrobNorm(std::vector<listnd> listset, int t, size_t n, int s1)
   * @return the vecnd the median value 
   */
 
-vecnd vectorMedian(std::vector<vecnd> vectorset){
-	return vectorset[0];
+vecnd vectorMedian(std::vector<vecnd>& vectorset){
+	size_t size = vectorset[0].size();
+	vecnd result(size);
+	//std::cout << "the size" << vectorset[0].size() << std::endl; 
+	result = vectorset[0];
+	return result;
 }

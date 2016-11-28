@@ -147,12 +147,9 @@ void readDataFromDisk(char* fileName, std::vector<vecnd>& dataset, int desired_p
 			}*/
 		}
 		//std::cout<<"fuck!"<<std::endl;
-
-		std::cout<<"data set size now"<<dataset.size()<<std::endl;
 		//std::cout<<"vecnd size is "<< temp._size<<std::endl;
-		std::cout<<dataset[current_point_id]<<std::endl;
+		//std::cout<<dataset[current_point_id]<<std::endl;
 		//std::cout<<temp<<std::endl;
-		std::cout<<"insert point numb"<<current_point_id<<std::endl;
 		//dataset[current_point_id] = std::move(temp);
 
 
@@ -160,7 +157,6 @@ void readDataFromDisk(char* fileName, std::vector<vecnd>& dataset, int desired_p
 		//dataset.emplace_back(temp);
 
 		current_point_id++;
-		std::cout<<"insert point numb"<<current_point_id<<std::endl;
 	}
 
 }  

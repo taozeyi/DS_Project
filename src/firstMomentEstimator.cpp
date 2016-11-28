@@ -1,8 +1,10 @@
 #include <vector>
 #include "abod.h"
+#include "vecnd.h"
 
-vecnd firstMomentEstimator(std::vector<listnd> listset, int t, size_t n){
+vecnd firstMomentEstimator(std::vector<listnd>& listset, int t, size_t n){
 	vecnd firstMoment(n);
+	std::cout <<"the size of firstMoment "<< firstMoment.size()<<std::endl;
 	for(int i = 0; i<t; i++){
 		vecnd c_left(n);
 		vecnd c_right(n);
@@ -16,5 +18,6 @@ vecnd firstMomentEstimator(std::vector<listnd> listset, int t, size_t n){
 			firstMoment[k] = firstMoment[k] + c_left[k]*c_right[k];
 		}
 	}
-	return firstMoment*(2*M_PI)/(t*(n-1)*(n-2));
+	vecnd::value_type temp = (2*M_PI)/(t*(n-1)*(n-2));
+	return firstMoment*temp;
 }

@@ -33,6 +33,10 @@ class vecnd{
 	//vecnd(std::unique_ptr<value_type[]> v);
 	//vecnd(std::unique_ptr<value_type[]> v, int entry, float value);
 
+	////////////////
+	// Destructor //
+	////////////////
+
 	///////////////
 	// Inspector //
 	///////////////
