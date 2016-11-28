@@ -1,3 +1,5 @@
+#ifndef UTIL_H
+#define UTIL_H
 #include <iostream>
 #include <memory>
 #include <algorithm>
@@ -90,7 +92,7 @@ static vecnd randomVector(size_t n,float lower=0.0f,float upper=1.0f)
 	return v;
 }
 
-static std::vector<vecnd::value_type>::iterator select(std::vector<vecnd::value_type>::iterator start, std::vector<vecnd::value_type>::iterator end, int n)
+static std::vector<vecnd>::iterator select(std::vector<vecnd>::iterator start, std::vector<vecnd>::iterator end, size_t n,size_t idx)
 {
 	int size=std::distance(start,end);
 	if(size<=1)
@@ -98,28 +100,64 @@ static std::vector<vecnd::value_type>::iterator select(std::vector<vecnd::value_
 		return start;
 	}
 
-	n=std::min(n,size);
-	vecnd::value_type pivot=*(start+randomInt(0,size-1));
+	n=n<size?n:size;
+	auto pivot=start+randomInt(0,size-1);
 
-	auto flag=std::partition(start,end,[&](vecnd::const_reference p)
+	auto p=start,q=end-1;
+	std::cout<<(*pivot)[idx]<<std::endl;
+	for(auto i=start;i!=end;i++)
+	{
+		std::cout<<(*i)[idx]<<" ";
+	}
+        std::cout<<std::endl;
+	while(p!=q)
+	{
+		while((*p)[idx]<=(*pivot)[idx]&&p!=q)
+		{
+			p++;
+		}
+		while((*q)[idx]>(*pivot)[idx]&&p!=q)
+		{
+			q--;
+		}
+		if(p!=q)
+		{
+			swap(*p,*q);
+			if(q==pivot)
 			{
-				return p<pivot;
-			});
+				pivot=p;
+			}
+		}
+	}
+	for(auto i=start;i!=end;i++)
+	{
+		std::cout<<(*i)[idx]<<" ";
+	}
+	std::cout<<std::endl;
+	auto flag=p;
 	int left=std::distance(start,flag);
+	std::cout<<"flag:"<<(*flag)<<" left:"<<left<<" n:"<<n<<std::endl;
 	int right=std::distance(flag,end);
 	if(left>n)
 	{
-		return select(start,flag,n);
+		return select(start,flag,n,idx);
 	}
 	if(left==n)
 	{
-		return flag;
+		return pivot;
 	}
-	return select(flag,end,n-left);
+	return select(flag,end,n-left,idx);
 }
 
-vecnd::value_type median(std::vector<vecnd::value_type>::iterator start,
-			 std::vector<vecnd::value_type>::iterator end)
+vecnd median(std::vector<vecnd>::iterator start,std::vector<vecnd>::iterator end)
 {
-	return *(select(start,end,std::distance(start,end)/2));
+	vecnd result(start->size());
+	for(size_t i=0;i<start->size();i++)
+	{
+		size_t size=std::distance(start,end);
+		size_t n=size%2==1?size/2+1:size/2;
+		result[i]=(*select(start,end,n,i))[i];
+	}
+	return result;
 }
+#endif

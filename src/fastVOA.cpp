@@ -1,5 +1,6 @@
 #include <vector>
 #include <math.h>
+#include "util.h"
 #include "abod.h"
 
 size_t count = 0;
@@ -96,7 +97,6 @@ vecnd squaredSumOfFrobNorm(std::vector<listnd>& listset, int t, size_t n, int s1
 vecnd vectorMedian(std::vector<vecnd>& vectorset){
 	size_t size = vectorset[0].size();
 	vecnd result(size);
-	//std::cout << "the size" << vectorset[0].size() << std::endl; 
-	result = vectorset[0];
+	result = median(vectorset.begin(),vectorset.end());
 	return result;
 }
