@@ -14,7 +14,7 @@ vecnd::vecnd(size_t size){
 	_attrs = std::shared_ptr<value_type>(new value_type[size], std::default_delete<value_type>());
 	_size = size;
 }
-vecnd::vecnd(const vecnd& v){
+vecnd::vecnd(const vecnd& v):vecnd(v.size()){
 	std::copy(v.begin(), v.end(), begin());
 	_size = v._size;
 }
