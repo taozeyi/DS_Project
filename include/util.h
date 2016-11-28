@@ -89,3 +89,37 @@ static vecnd randomVector(size_t n,float lower=0.0f,float upper=1.0f)
 	}
 	return v;
 }
+
+static std::vector<vecnd::value_type>::iterator select(std::vector<vecnd::value_type>::iterator start, std::vector<vecnd::value_type>::iterator end, int n)
+{
+	int size=std::distance(start,end);
+	if(size<=1)
+	{
+		return start;
+	}
+
+	n=std::min(n,size);
+	vecnd::value_type pivot=*(start+randomInt(0,size-1));
+
+	auto flag=std::partition(start,end,[&](vecnd::const_reference p)
+			{
+				return p<pivot;
+			});
+	int left=std::distance(start,flag);
+	int right=std::distance(flag,end);
+	if(left>n)
+	{
+		return select(start,flag,n);
+	}
+	if(left==n)
+	{
+		return flag;
+	}
+	return select(flag,end,n-left);
+}
+
+vecnd::value_type median(std::vector<vecnd::value_type>::iterator start,
+			 std::vector<vecnd::value_type>::iterator end)
+{
+	return *(select(start,end,std::distance(start,end)/2));
+}
