@@ -27,7 +27,7 @@ class vecnd{
 	// Constructor//
 	////////////////
 	vecnd(void);
-	vecnd(size_t size);
+	vecnd(size_t size,value_type val=0.0f);
 	vecnd(const vecnd& v);
 
 	//vecnd(std::unique_ptr<value_type[]> v);
@@ -77,6 +77,7 @@ class vecnd{
 	///////////////
 	// Methods   //
 	///////////////
+	class matrix outer(const vecnd& v) const;
 	value_type dot(const vecnd& v) const;
 	value_type squared_length(void) const;
 	value_type length(void) const;

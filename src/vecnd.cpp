@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include "vecnd.h"
-
+#include "matrix.h"
 /////////////////
 // Constructor //
 /////////////////
@@ -10,9 +10,10 @@ vecnd::vecnd(void){
 	_size =0;
 }
 
-vecnd::vecnd(size_t size){
+vecnd::vecnd(size_t size,vecnd::value_type val){
 	_attrs = std::shared_ptr<value_type>(new value_type[size], std::default_delete<value_type>());
 	_size = size;
+	std::fill(begin(),end(),val);
 }
 vecnd::vecnd(const vecnd& v):vecnd(v.size()){
 	std::copy(v.begin(), v.end(), begin());
@@ -176,6 +177,17 @@ vecnd& vecnd::operator/=(vecnd::value_type scale){
 /////////////
 // Method  //
 /////////////
+matrix vecnd::outer(const vecnd& v) const
+{
+	size_t n=v.size();
+	matrix mat(n,n);
+	for(size_t i=0;i<n;i++)
+		for(size_t j=0;j<n;j++)
+		{
+			mat[i][j]=(*this)[i]*v[j];
+		}
+	return mat;
+}
 vecnd::value_type vecnd::dot(const vecnd& v) const{
 	vecnd::value_type dot_value=0.0f;
 	vecnd result(size());
