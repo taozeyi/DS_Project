@@ -1,7 +1,6 @@
 #include <ctime>
 #include <cstdlib>
 #include "abod.h"
-#include "util.h"
 
 vecnd frobeniusNorm(std::vector<listnd>& listset, int t, size_t n){
 	vecnd frobeniusNorm(n);
@@ -54,16 +53,43 @@ vecnd frobeniusNorm(std::vector<listnd>& listset, int t, size_t n){
 }
 
 vecnd pointWiseIndependentVector(size_t n){
-	vecnd vec(n);
-	for(size_t i = 0; i < n; i++){
-		int random = rand();
-		if(random % 2 == 1){
-			vec[i] = 1;
-		}
-		else{
-			vec[i] = -1;
-		}
 
-	}
-	return vec;
+	int k = 4;
+	int m = 2;
+	vecnd kWiseHash(n);
+
+	std::srand(std::time(0));
+
+	for(int i = 0; i < n; i++){
+
+		vecnd coefficient(k);
+  		vecnd seedX(n);
+  	
+    	//std::srand(std::time(0));
+  		for(int i = 0; i < k; i++){
+  		
+  			coefficient[i] = rand()%100;
+  			//std::cout << coefficient[i] << std::endl; 
+  		}
+
+  		for(int i = 0; i < n; i++){
+  			//std::srand(std::time(0));
+  			seedX[i] = rand()%100;
+  			//std::cout << seedX[i] << std::endl; 
+  			//std::cout << "0" << std::endl; 
+  		}
+
+		int tempSum = 0;
+
+  		for(int j = 0; j < k; j++){
+  			//std::cout <<"The co" <<coefficient[j]<< std::endl;
+		    //std::cout <<"The seed"<<seedX[i] << std::endl; 
+  			tempSum += coefficient[j]*pow(seedX[i], j);
+  		    //std::cout <<"The sum"<< tempSum << std::endl; 
+  		}
+
+  		kWiseHash[i] = tempSum % MAX_PRIME % m;
+  		//std::cout << tempSum << std::endl; 	
+  	}
+  	return kWiseHash;
 }
