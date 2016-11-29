@@ -149,7 +149,7 @@ static std::vector<vecnd>::iterator select(std::vector<vecnd>::iterator start, s
 	return select(flag,end,n-left,idx);
 }
 
-vecnd median(std::vector<vecnd>::iterator start,std::vector<vecnd>::iterator end)
+static vecnd median(std::vector<vecnd>::iterator start,std::vector<vecnd>::iterator end)
 {
 	vecnd result(start->size());
 	for(size_t i=0;i<start->size();i++)

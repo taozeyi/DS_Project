@@ -19,4 +19,8 @@ vecnd firstMomentEstimator(std::vector<listnd>& listset, int t, size_t n);
 vecnd frobeniusNorm(std::vector<listnd>& listset, int t, size_t n);
 
 vecnd pointWiseIndependentVector(size_t n);
+
+vecnd bruteForceMOA2(std::vector<listnd>& listset, int t, size_t n);
+
+vecnd bruteForceVOA(std::vector<vecnd>& dataset, int t);
 #endif

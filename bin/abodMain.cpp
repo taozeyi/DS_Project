@@ -10,9 +10,11 @@
 #include "abod.h"
 #include "vecnd.h"
 #include "listnd.h"
-#include "util.h"
 
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <unistd.h>
 using namespace std;
 
 bool flag_generation =									false;
