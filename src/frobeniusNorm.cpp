@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include "abod.h"
 
+#define MAX_PRIME 2147483647
+
 vecnd frobeniusNorm(std::vector<listnd>& listset, int t, size_t n){
 	vecnd frobeniusNorm(n);
 	vecnd s_left = pointWiseIndependentVector(n);
